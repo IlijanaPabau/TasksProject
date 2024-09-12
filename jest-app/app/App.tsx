@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Form from './Form';
 import List from './List';
-import Search from './Search';
+import Search from './ui/search';
 import { Task } from './types';
 
 const App = () => {
@@ -35,6 +35,10 @@ const App = () => {
         setTasks(tasks.filter(task => task.id !== id));
     };
 
+    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(e.target.value);
+    };
+
     return (
         <div>
             <Form
@@ -42,10 +46,10 @@ const App = () => {
                 editTask={editTask}
                 editingTask={editingTask}
             />
-            <Search
+            { <Search
                 placeholder="Search tasks..."
-                onChange={(e) => setSearchQuery(e.target.value)} 
-            />
+                onChange={handleSearchChange} 
+            /> }
             <List
                 tasks={filteredTasks} 
                 toggleTask={toggleTask}

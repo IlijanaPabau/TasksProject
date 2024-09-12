@@ -10,6 +10,7 @@
   "dependencies": {
     "@apollo/client": "^3.11.8",
     "@heroicons/react": "^2.1.5",
+    "@vercel/postgres": "^0.10.0",
     "apollo-server-micro": "^3.13.0",
     "clsx": "^2.1.1",
     "graphql": "^16.9.0",
