@@ -1,9 +1,10 @@
+"use client"
 import Image from 'next/image';
 import { lusitana } from '../fonts';
 import Search from '../search';
 import { FormattedUsersTable } from '../../lib/definitions';
 
-export default function CustomersTable({
+export default function UsersTable({
   users,
 }: {
   users: FormattedUsersTable[];
@@ -53,7 +54,7 @@ export default function CustomersTable({
                         <p className="font-medium">{user.total_pending}</p>
                       </div>
                       <div className="flex w-1/2 flex-col">
-                        <p className="text-xs">Paid</p>
+                        <p className="text-xs">Finished</p>
                         <p className="font-medium">{user.total_finished}</p>
                       </div>
                     </div>

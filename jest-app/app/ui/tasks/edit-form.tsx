@@ -4,11 +4,12 @@ import { UserField, TaskForm } from '../../lib/definitions';
 import {
   CheckIcon,
   ClockIcon,
-  CurrencyDollarIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { Button } from '../button';
+import { useActionState } from 'react';
+import { updateTask } from '@/app/lib/actions';
 
 export default function EditTaskForm({
   task,
@@ -17,8 +18,12 @@ export default function EditTaskForm({
   task: TaskForm;
   users: UserField[];
 }) {
+  const initialState: State = { message: null, errors: {} };
+  const updateTaskWithId = updateTask.bind(null, task.id);
+  const [state, formAction] = useActionState(updateTaskWithId, initialState);
+
   return (
-    <form>
+    <form action={formAction}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* User Name */}
         <div className="mb-4">
@@ -85,7 +90,7 @@ export default function EditTaskForm({
               </div>
               <div className="flex items-center">
                 <input
-                  id="paid"
+                  id="finished"
                   name="status"
                   type="radio"
                   value="finished"

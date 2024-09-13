@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { UpdateTask, DeleteTask } from './buttons';
-import InvoiceStatus from './status';
+import TaskStatus from './status';
 import { formatDateToLocal } from '../../lib/utils';
 import { fetchFilteredTasks } from '../../lib/data';
 
@@ -19,7 +19,7 @@ export default async function TasksTable({
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
           <div className="md:hidden">
-            {tasks?.map((task : any) => (
+            {tasks?.map((task) => (
               <div
                 key={task.id}
                 className="mb-2 w-full rounded-md bg-white p-4"
@@ -38,7 +38,7 @@ export default async function TasksTable({
                     </div>
                     <p className="text-sm text-gray-500">{task.email}</p>
                   </div>
-                  <InvoiceStatus status={task.status} />
+                  <TaskStatus status={task.status} />
                 </div>
                 <div className="flex w-full items-center justify-between pt-4">
                   <div>
@@ -62,7 +62,7 @@ export default async function TasksTable({
                   Email
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
-                  Amount
+                  Description
                 </th>
                 <th scope="col" className="px-3 py-5 font-medium">
                   Date
@@ -76,7 +76,7 @@ export default async function TasksTable({
               </tr>
             </thead>
             <tbody className="bg-white">
-              {tasks?.map((task : any) => (
+              {tasks?.map((task) => (
                 <tr
                   key={task.id}
                   className="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg"
@@ -103,7 +103,7 @@ export default async function TasksTable({
                     {formatDateToLocal(task.date)}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    <InvoiceStatus status={task.status} />
+                    <TaskStatus status={task.status} />
                   </td>
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex justify-end gap-3">

@@ -1,47 +1,47 @@
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
 // https://nextjs.org/learn/dashboard-app/fetching-data
-  const users = [
+const users = [
     {
       id: 'd6e15727-9fe1-4961-8c5b-ea44a9bd81aa',
       name: 'Evil Rabbit',
       email: 'evil@rabbit.com',
       password: '123456',
-      image_url: '/customers/evil-rabbit.png',
+      image_url: '/users/evil-rabbit.png',
     },
     {
       id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
       name: 'Delba de Oliveira',
       email: 'delba@oliveira.com',
       password: '1234567',
-      image_url: '/customers/delba-de-oliveira.png',
+      image_url: '/users/delba-de-oliveira.png',
     },
     {
       id: '3958dc9e-742f-4377-85e9-fec4b6a6442a',
       name: 'Lee Robinson',
       email: 'lee@robinson.com',
       password: '1234568',
-      image_url: '/customers/lee-robinson.png',
+      image_url: '/users/lee-robinson.png',
     },
     {
       id: '76d65c26-f784-44a2-ac19-586678f7c2f2',
       name: 'Michael Novotny',
       email: 'michael@novotny.com',
       password: '1234569',
-      image_url: '/customers/michael-novotny.png',
+      image_url: '/users/michael-novotny.png',
     },
     {
       id: 'CC27C14A-0ACF-4F4A-A6C9-D45682C144B9',
       name: 'Amy Burns',
       email: 'amy@burns.com',
       password: '12345610',
-      image_url: '/customers/amy-burns.png',
+      image_url: '/users/amy-burns.png',
     },
     {
       id: '13D07535-C59E-4157-A011-F8D2EF4E0CBB',
       name: 'Balazs Orban',
       email: 'balazs@orban.com',
       password: '12345611',
-      image_url: '/customers/balazs-orban.png',
+      image_url: '/users/balazs-orban.png',
     },
   ];
   
